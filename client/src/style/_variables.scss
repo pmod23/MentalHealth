@@ -1,0 +1,7 @@
+$primary: rgba(199, 146, 255, 1);
+$textColor: #333;
+
+:root {
+  --primary: #{$primary};
+  --text-color: #{$textColor};
+}

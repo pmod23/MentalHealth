@@ -1,0 +1,13 @@
+.auth {
+  min-height: 100vh;
+  @include center;
+  &__container {
+    width: 100%;
+    max-width: 35rem;
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+  }
+}

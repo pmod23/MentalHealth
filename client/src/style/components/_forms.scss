@@ -1,0 +1,83 @@
+.text-input {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  &__label {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: lighten($primary, 5%);
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #f7f8f9;
+    border: 1px solid #c6d9df;
+    border-radius: 0.7rem;
+    &.error {
+      border-color: indianred;
+    }
+  }
+  &__error {
+    color: indianred;
+    margin-top: 3px;
+  }
+}
+
+.btn {
+  --main-color: #{$primary};
+  --main-color-hover: #{darken($primary, 13%)};
+
+  display: block;
+  width: max-content;
+  border: none;
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  a {
+    text-decoration: none;
+    color: currentColor;
+  }
+
+  &:hover {
+    background-color: var(--main-color-hover);
+  }
+
+  &.ghost {
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    --main-color-hover: transparent;
+  }
+
+  &.white {
+    --main-color: #fff;
+  }
+}
+
+.radio {
+  display: block;
+  input {
+    display: none;
+  }
+  &__button {
+    display: block;
+    width: max-content;
+    background-color: #f7f8f9;
+    border-radius: 0.5rem;
+    border: 2px solid #c6d9df;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: border 0.3s ease;
+  }
+
+  input:checked + &__button {
+    border-color: $primary;
+    color: $primary;
+  }
+}
